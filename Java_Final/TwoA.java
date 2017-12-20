@@ -11,5 +11,5 @@ public class TwoA {
 		obj2.setDetails();
 		obj2.display();
 	}
-
+ 
 }
