@@ -9,8 +9,8 @@ public class OneA implements Test{
 	}
 	
 	public static void main(String[] args){
-		OneA obj = new OneA();
-		obj.print(34);
+		Test var = new OneA();
+		var.print(34);
 	}
 	
 }
