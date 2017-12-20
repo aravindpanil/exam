@@ -3,9 +3,20 @@ public class ThreeA {
 
 	int age;
 	String name;
-	public static void main(String[] args) {
+	
+	public static void main(String[] args){
 		ThreeA obj = new ThreeA();
 		obj.read();
+	}
+	
+	ThreeA(){
+		
+	}
+	
+	ThreeA(int a,String na){
+		age = a;
+		name = na;
+		System.out.println("Name "+name+" Age "+age);
 	}
 	
 	void read(){
@@ -16,16 +27,18 @@ public class ThreeA {
 			String n = sc.nextLine();
 			boolean res = isNumber(n);
 			if(res)
-				throw new NameException("Integer Entered For Name\n");
+				throw new NameException();
 			int ag = sc.nextInt();
 			if(ag > 50)
-				throw new AgeException("Employee over 50\n");
+				throw new AgeException();
+			ThreeA obj = new ThreeA(ag,n);
+			
 		}
 			
 		catch(Exception e){
 			System.out.println(e);
 		}
-		
+		sc.close();
 	}
 	
 	boolean isNumber(String n){
@@ -38,4 +51,20 @@ public class ThreeA {
 		return true;
 	}
 
+}
+
+class NameException extends Exception{
+	
+	public String toString(){
+		return("Error:Number entered for name\n");
+	}
+	
+}
+
+class AgeException extends Exception{
+	
+	public String toString(){
+		return("Error:Employee Age over 50\n");
+	}
+	
 }
