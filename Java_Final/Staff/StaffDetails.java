@@ -6,13 +6,7 @@ public class StaffDetails {
 		String id, name,desig;
 		String sub1,sub2,sub3;
 		
-		public static void main(String[] args) {
-			StaffDetails obj1 = new StaffDetails();
-			obj1.setDetails();
-			obj1.display();
-		}
-		
-		void setDetails(){
+		public void setDetails(){
 			System.out.println("Enter id, name and designation\n");
 			Scanner sc = new Scanner(System.in);
 			id=sc.nextLine();
@@ -25,7 +19,7 @@ public class StaffDetails {
 			sc.close();
 		}
 		
-		void display(){
+		public void display(){
 			System.out.println("Name:"+name+"\n"+"Designation:"+desig+"\n"+"Subject 1:"+sub1+"\n"+"Subject 2:"+sub2+"\n"+"Subject 3:"+sub3);
 		}
 }

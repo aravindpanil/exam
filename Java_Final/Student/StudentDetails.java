@@ -6,14 +6,8 @@ public class StudentDetails {
 	int sub1,sub2,sub3;
 	float sgpa;
 	char grade;
-	public static void main(String[] args) {
-		StudentDetails obj = new StudentDetails();
-		obj.setDetails();
-		obj.calc();
-		obj.display();
-	}
-	
-	void setDetails(){
+
+	public void setDetails(){
 		System.out.println("Enter USN and department name\n");
 		Scanner sc = new Scanner(System.in);
 		USN=sc.nextLine();
@@ -25,7 +19,7 @@ public class StudentDetails {
 		sc.close();
 	}
 	
-	void calc(){
+	public void calc(){
 		sgpa = (sub1+sub2+sub3)/30;
 		
 		switch(Math.round(sgpa)){
@@ -46,7 +40,7 @@ public class StudentDetails {
 		
 	}
 	
-	void display(){
+	public void display(){
 		System.out.println("USN:"+USN+"\n"+"Department:"+dept+"\n"+"Subject 1:"+sub1+"\n"+"Subject 2:"+sub2+"\n"+"Subject 3:"+sub3);
 		System.out.println("SGPA is "+sgpa+" and grade is "+grade);
 	}
