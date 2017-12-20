@@ -6,6 +6,7 @@ public class TwoA {
 		StudentDetails obj1 = new StudentDetails();
 		StaffDetails obj2 = new StaffDetails();
 		obj1.setDetails();
+		obj1.calc();
 		obj1.display();
 		obj2.setDetails();
 		obj2.display();

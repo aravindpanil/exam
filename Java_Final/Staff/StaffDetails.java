@@ -1,5 +1,4 @@
 package Staff;
-import java.util.Scanner;
 
 public class StaffDetails {
 
@@ -8,15 +7,15 @@ public class StaffDetails {
 		
 		public void setDetails(){
 			System.out.println("Enter id, name and designation\n");
-			Scanner sc = new Scanner(System.in);
-			id=sc.nextLine();
-			name=sc.nextLine();
-			desig=sc.nextLine();
+			
+			id="1MSe0229";
+			name="John";
+			desig="CS";
 			System.out.println("Enter three subjects\n");
-			sub1 = sc.nextLine();
-			sub2 = sc.nextLine();
-			sub3 = sc.nextLine();
-			sc.close();
+			sub1 = "DMS";
+			sub2 = "DAA";
+			sub3 = "MATH";
+			
 		}
 		
 		public void display(){
