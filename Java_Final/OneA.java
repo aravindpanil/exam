@@ -1,16 +1,16 @@
-interface Test{
-	void print(int a);
+interface Student{
+	String sname = "";
+	String sno = "";
+	int cls = 0;
+	String getValue();
 }
 
-public class OneA implements Test{
+interface Department{
+	int dno = 0;
+	float getAttendance();
+}
 
-	public void print(int a){
-		System.out.println(a);
-	}
-	
-	public static void main(String[] args){
-		Test var = new OneA();
-		var.print(34);
-	}
-	
+interface exam extends Student, Department{
+	void calAttendance();
+	boolean eligible();
 }
