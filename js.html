@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>
+CLass marks
+</title>
+</head>
+<body>
+<script>
+
+var marks = new Array();
+function outer(marks){
+	for(var i = 1;i <=3; i++){
+		var temp = parseInt(prompt("Enter marks "+i));
+		marks.push(temp);
+	}
+	document.write(marks);
+	
+	var grade = new Array();
+	for(i = 0;i < 3;i++){
+		if(marks[i] > 40){
+			grade.push("Pass");
+		}
+		else{
+			grade.push("Fail");
+		}	
+	}
+	
+	function inner(){
+		var total = parseInt(marks[0] + marks[1] + marks[2]);
+		document.write(total);
+		document.write(grade);
+	}
+	
+	return inner();
+}
+outer(marks);
+</script>
+</html>
+</body>
